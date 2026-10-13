@@ -11,7 +11,6 @@
     "Hooks": {
         "ParserFirstCallInit": "FormularSystemHooks::onParserFirstCallInit"
     },
-    "manifest_version": 2,
     "AutoloadClasses": {
         "FormularSystemHooks": "includes/FormularSystemHooks.php"
     },
@@ -26,23 +25,21 @@
             ],
             "dependencies": [
                 "jquery"
-            ],
-            "targets": [
-                "desktop",
-                "mobile"
             ]
         }
     },
-    "Config": {
-        "wgFormularSystemURL": {
+    "requires": {
+        "MediaWiki": ">= 1.39.0"
+    },
+    "config": {
+        "FormularSystemURL": {
             "value": "",
-            "description": "Base URL of the Formular-System application",
-            "type": "string"
+            "description": "Base URL of the Formular-System application"
         },
-        "wgFormularSystemIgnoreSSLCertificate": {
+        "FormularSystemIgnoreSSLCertificate": {
             "value": false,
-            "description": "Whether to ignore SSL certificate errors",
-            "type": "boolean"
+            "description": "Whether to ignore SSL certificate errors"
         }
-    }
+    },
+    "manifest_version": 2
 }
