@@ -22,7 +22,7 @@ class FormularSystemHooks {
         $iframe = "<iframe id=\"formularIframe\" src=\"$iframeURL\" width=\"100%\" height=\"600px\" frameborder=\"0\" allowfullscreen></iframe>";
 
         // Lade das Skript über die MediaWiki ResourceLoader API
-        $parser->getOutput()->addModules('ext.mwFormularSystem');
+        $parser->getOutput()->addModules( [ 'ext.mwFormularSystem' ] );
 
         return $iframe;
     }
